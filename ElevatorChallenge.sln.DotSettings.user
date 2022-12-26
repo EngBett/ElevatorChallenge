@@ -1,7 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bc4b8d05_002Dc53c_002D4829_002D9d25_002D3fb3645a3a71/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ElevatorRequestTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::10B4D92F-F475-47B8-8ABE-CE86EA02C6CB::net6.0::ElevatorChallenge.Test.ElevatorRequestTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::10B4D92F-F475-47B8-8ABE-CE86EA02C6CB::net6.0::ElevatorChallenge.Test.Tests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="D:\projects\ElevatorChallenge\ElevatorChallenge.Test" Presentation="&amp;lt;ElevatorChallenge.Test&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

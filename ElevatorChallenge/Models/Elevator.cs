@@ -3,6 +3,9 @@ using ElevatorChallenge.Exceptions;
 
 namespace ElevatorChallenge.Models;
 
+/// <summary>
+/// Elevator Model
+/// </summary>
 public class Elevator
 {
     public Elevator(string name, int maximumCapacity, int bottomFloor, int topFloor)
@@ -15,15 +18,12 @@ public class Elevator
 
     public Elevator(string name, int maximumCapacity)
     {
-        if (string.IsNullOrEmpty(Name)) throw new DomainException("Elevator name must not be empty");
+        if (string.IsNullOrEmpty(name)) throw new DomainException("Elevator name must not be empty");
         if (maximumCapacity <= 0) throw new DomainException("Maximum capacity must be greater than 0");
         Name = name;
         MaximumCapacity = maximumCapacity;
     }
 
-    public Elevator()
-    {
-    }
 
     public string Name { get; private set; }
     public ElevatorMotionStatuses ElevatorMotionStatus { get; set; } = ElevatorMotionStatuses.Stationary;

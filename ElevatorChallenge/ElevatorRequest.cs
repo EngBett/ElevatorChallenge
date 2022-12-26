@@ -4,6 +4,9 @@ using ElevatorChallenge.Models;
 
 namespace ElevatorChallenge;
 
+/// <summary>
+/// Creates a request for an elevator in a building
+/// </summary>
 public class ElevatorRequest
 {
     private readonly Building _building;
@@ -15,6 +18,11 @@ public class ElevatorRequest
         _person = person;
     }
 
+    /// <summary>
+    ///  Request an elevator for person
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="DomainException"></exception>
     public Elevator? RequestElevator()
     {
         var elevators = _building.Elevators;
@@ -22,6 +30,10 @@ public class ElevatorRequest
 
         if (_person.DestinationFloor == _person.StartingFloor)
             throw new DomainException("Cannot request and elevator to the floor you already are in.");
+
+        if(_person.DestinationFloor>_building.TopFloor || _person.DestinationFloor<_building.BottomFloor || _person.StartingFloor<_building.BottomFloor || _person.StartingFloor>_building.TopFloor)
+            throw new DomainException("Floors supplied are out of range");
+
         if (_person.DestinationFloor > _person.StartingFloor) motionStatus = ElevatorMotionStatuses.MovingUp;
         if (_person.DestinationFloor < _person.StartingFloor) motionStatus = ElevatorMotionStatuses.MovingDown;
 

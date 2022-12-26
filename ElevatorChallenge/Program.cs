@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System;
-using System.Text;
+﻿using System.Text;
 using ElevatorChallenge.Exceptions;
 using ElevatorChallenge.Models;
 
@@ -37,6 +34,10 @@ internal class Program
         Environment.Exit(0);
     }
 
+    /// <summary>
+    /// Runs the console program for Elevator
+    /// </summary>
+    /// <param name="building"></param>
     private static void RunProgram(Building building)
     {
         int choice;
@@ -66,6 +67,9 @@ internal class Program
         }
     }
 
+    /// <summary>
+    /// Menu for to guide running of the program
+    /// </summary>
     private static void Menu()
     {
         var str = new StringBuilder("Enter the choices below:\n");

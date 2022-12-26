@@ -5,6 +5,7 @@ public class Building
 {
     public Building(int topFloor, int bottomFloor)
     {
+        if(topFloor==bottomFloor || topFloor<bottomFloor) throw new DomainException("Bottom floor and top floor invalid.");
         TopFloor = topFloor;
         BottomFloor = bottomFloor;
     }
@@ -15,7 +16,8 @@ public class Building
 
     public void AddElevators(IEnumerable<Elevator> elevators)
     {
-        if (elevators.Any(elevator => Elevators.Any(x => string.Equals(x.Name, elevator.Name, StringComparison.CurrentCultureIgnoreCase))))
+        var set = Elevators.Any() ? Elevators.Select(x => x.Name).ToHashSet() : new HashSet<string>();
+        if (elevators.Any(x=>!set.Add(x.Name)))
         {
             throw new DomainException("Multiple elevator names not allowed");
         }

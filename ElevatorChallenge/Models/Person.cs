@@ -9,6 +9,12 @@ public class Person
         Elevator = elevator;
     }
 
+    public Person(int startingFloor, int destinationFloor)
+    {
+        StartingFloor = startingFloor;
+        DestinationFloor = destinationFloor;
+    }
+
     public Person(){}
     public int StartingFloor { get; set; }
     public int DestinationFloor { get; set; }
